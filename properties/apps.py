@@ -6,6 +6,6 @@ class PropertiesConfig(AppConfig):
     name = 'properties'
 
     def ready(self) -> None:
-        from . import signals
+        import properties.signals
 
         return super().ready()
