@@ -1,0 +1,2 @@
+def getallproperties():
+    return None

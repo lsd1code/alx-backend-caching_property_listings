@@ -1,5 +1,8 @@
 from django.views.decorators.cache import cache_page
 from django.http import JsonResponse
+
+from .utils import getallproperties
+
 from .serializers import (
     PropertySerializer
 )
@@ -11,7 +14,7 @@ from .models import (
 
 @cache_page(60 * 15)
 def property_list(request):
-    queryset = Property.objects.all()
+    queryset = getallproperties()
     serializer = PropertySerializer(queryset, many=True)
 
     return JsonResponse({'properties': serializer.data})
