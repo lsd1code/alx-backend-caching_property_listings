@@ -1,7 +1,7 @@
 from django.views.decorators.cache import cache_page
 from django.http import JsonResponse
 
-from .utils import getallproperties
+from .utils import get_all_properties
 
 from .serializers import (
     PropertySerializer
