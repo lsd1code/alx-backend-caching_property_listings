@@ -86,11 +86,11 @@ DATABASES = {
         'USER': os.getenv('POSTGRES_DB_USER'),
         'PASSWORD': os.getenv('POSTGRES_DB_PASSWORD'),
         'HOST': os.getenv('POSTGRES_DB_HOST'),
-        'PORT': os.getenv('POSTGRES_DB_PORT'),
+        'PORT': '5432',
     }
 }
 
-#TODO: Caching with Redis
+# TODO: Caching with Redis
 CACHES = {
     "default": {
         "BACKEND": "django_redis.cache.RedisCache",
