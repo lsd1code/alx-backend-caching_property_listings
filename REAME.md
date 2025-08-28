@@ -1,0 +1,1 @@
+# Django Project with Dockerized `Postgres` and `Redis`
